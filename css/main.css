@@ -1,0 +1,38 @@
+.navbar {
+  height: 8em;
+  background: #7221a5; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #7221a5 0%, #4726a0 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #7221a5 0%,#4726a0 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #7221a5 0%,#4726a0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7221a5', endColorstr='#4726a0',GradientType=1 );
+  font-family: "Patua One";
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+#brand {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.navbar .container .navbar-brand {
+  font-family: "Nunito";
+  font-size: 2.4em;
+}
+
+.shrink {
+  height: 3em;
+}
+
+.shrink-brand {
+  font-size: 1.3em !important;
+}
+
+.container {
+  max-width: 65em !important;
+}
+
+.nav-item {
+  font-size: 2em;
+  font-family: "Nunito";
+}
