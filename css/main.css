@@ -24,8 +24,16 @@
   height: 3em;
 }
 
-.shrink-brand {
+.shrink .navbar-brand {
   font-size: 1.3em !important;
+}
+
+.nav-item {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.shrink-nav {
+  font-size: 1em !important;
 }
 
 .container {
