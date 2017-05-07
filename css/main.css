@@ -1,10 +1,10 @@
+body {
+  background-color: #f7f7f7 !important;
+}
+
 .navbar {
   height: 8em;
-  background: #7221a5; /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #7221a5 0%, #4726a0 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #7221a5 0%,#4726a0 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #7221a5 0%,#4726a0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7221a5', endColorstr='#4726a0',GradientType=1 );
+  background-color: #4d1a70 !important;
   font-family: "Patua One";
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
