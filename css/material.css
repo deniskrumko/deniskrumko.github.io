@@ -1,0 +1,72 @@
+body {
+  background-color: #f9f9f9 !important;
+}
+
+nav {
+  background-color: #4d1a70 !important;
+}
+
+.btn-floating {
+  background-color: #8f3191 !important;
+}
+
+/* Computer screen*/
+@media only screen and (min-width: 990px) {
+  .container {
+    width: 100% !important;
+  }
+
+
+}
+
+/* Mobile screen */
+@media only screen and (max-width: 990px) {
+  .container {
+    width: 95% !important;
+  }
+
+  .brand-logo {
+    font-size: 1.4em !important;
+    left: 43% !important;
+  }
+
+}
+
+.m-h1 {
+  font-weight: 600;
+  font-size: 2.5em;
+  color: #4d1a70 !important;
+}
+
+.m-link {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 2px;
+  color: #8f3191;
+}
+
+.m-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #8f3191;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.m-link:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.brand-logo {
+  font-family: "Nunito";
+  font-size: 1.7em !important;
+}
