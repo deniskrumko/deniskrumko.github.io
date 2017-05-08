@@ -2,6 +2,7 @@
   $(function(){
 
     $('.button-collapse').sideNav();
+    $('.brand-logo').sideNav();
 
     setTimeout(function(){
       $('#email-me').addClass('scale-in');

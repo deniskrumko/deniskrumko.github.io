@@ -70,3 +70,18 @@ nav {
   font-family: "Nunito";
   font-size: 1.7em !important;
 }
+
+#sidenav-overlay {
+  z-index: 996 !important;
+}
+
+#side-bg {
+  background-color: #451467;
+}
+
+#side-img {
+  height: 100px !important;
+  width: 100px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
