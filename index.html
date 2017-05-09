@@ -24,12 +24,14 @@
         <!-- Page Content goes here -->
         <div class="nav-wrapper">
           <a href="#!" data-activates="mobile-demo" class="brand-logo">@deniskrumko</a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse menu-opener">
+            <i class="material-icons">menu</i>
+          </a>
           <ul class="right hide-on-med-and-down">
-            <li><a>Home</a></li>
-            <li><a href="#Web_apps">Web apps</a></li>
-            <li><a href="#Python_libraries">Python libraries</a></li>
-            <li><a>Contacts</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#web">Web apps</a></li>
+            <li><a href="#python">Python libraries</a></li>
+            <li><a href="#contacts">Contacts</a></li>
           </ul>
           <ul class="side-nav" id="mobile-demo">
             <li>
@@ -41,12 +43,10 @@
                 <a href="#!email"><span class="white-text email">dkrumko@gmail.com</span></a>
               </div>
             </li>
-            <li><a href="#Web_apps">Web apps</a></li>
-            <li><a href="#Python_libraries">Python libraries</a></li>
-            <li>
-              <div class="divider"></div>
-            </li>
-            <li><a href="#!">Contacts</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#web">Web apps</a></li>
+            <li><a href="#python">Python libraries</a></li>
+            <li><a href="#contacts">Contacts</a></li>
           </ul>
         </div>
       </div>
@@ -54,36 +54,32 @@
   </div>
 
 
+
   <div class="container">
+    <div id="home" class="section scrollspy"></div>
     <div class="card">
       <div class="card-content">
         <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-      </div>
-      <div class="card-tabs">
-        <ul class="tabs tabs-fixed-width">
-          <li class="tab"><a class="active" href="#test4">About me</a></li>
-          <li class="tab"><a href="#test5">About site</a></li>
-          <li class="tab"><a href="#test6">Test 3</a></li>
-        </ul>
-      </div>
-      <div class="card-content grey lighten-4">
-        <div id="test4">About site</div>
-        <div id="test5">Test 2</div>
-        <div id="test6">Test 3</div>
+        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
       </div>
     </div>
 
-    <h1 class="center-align m-h1" id="Web_apps">Web apps</h1>
 
-    <p class="center-align">
-      <b>Web app</b> is a web site, created on <a href="#" class="m-link">Django</a> with front-end frameworks like
-      <a href="#" class="m-link">Bootstrap</a>, <a href="#" class="m-link">Semantic UI</a> and <a href="#" class="m-link">Materialize</a>.
-    </p>
+    <div id="web" class="section scrollspy">
+<h1 class="center-align m-h1">Web apps</h1>
+<p class="center-align">
+  <b>Web app</b> is a web site, created on <a href="#" class="m-link">Django</a> with front-end frameworks like
+  <a href="#" class="m-link">Bootstrap</a>, <a href="#" class="m-link">Semantic UI</a> and <a href="#" class="m-link">Materialize</a>.
+</p>
+    </div>
+
+
 
     <div class="row">
       <div class="col s12 m4">
         <!-- Promo Content 1 goes here -->
-        <div class="card hoverable">
+        <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="images/main.jpg">
           </div>
@@ -99,7 +95,7 @@
       </div>
       <div class="col s12 m4">
         <!-- Promo Content 2 goes here -->
-        <div class="card hoverable">
+        <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="images/main.jpg">
           </div>
@@ -115,7 +111,7 @@
       </div>
       <div class="col s12 m4">
         <!-- Promo Content 3 goes here -->
-        <div class="card hoverable">
+        <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="images/main.jpg">
           </div>
@@ -132,12 +128,15 @@
 
     </div>
 
-    <h1 class="center-align m-h1" id="Python_libraries">Python libraries</h1>
+
+    <div id="python" class="section scrollspy">
+<h1 class="center-align m-h1">Python libraries</h1>
+    </div>
 
     <div class="row">
       <div class="col s12 m4">
         <!-- Promo Content 1 goes here -->
-        <div class="card hoverable">
+        <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="images/main.jpg">
           </div>
@@ -156,7 +155,7 @@
       </div>
       <div class="col s12 m4">
         <!-- Promo Content 2 goes here -->
-        <div class="card hoverable">
+        <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="images/main.jpg">
           </div>
@@ -172,7 +171,7 @@
       </div>
       <div class="col s12 m4">
         <!-- Promo Content 3 goes here -->
-        <div class="card hoverable">
+        <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="images/main.jpg">
           </div>
@@ -188,6 +187,12 @@
       </div>
 
     </div>
+
+
+    <div id="contacts" class="section scrollspy">
+<h1 class="center-align m-h1">Contacts</h1>
+    </div>
+
   </div>
 
   <footer class="page-footer">

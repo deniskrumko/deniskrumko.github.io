@@ -2891,7 +2891,7 @@ if (jQuery) {
 			var $this = $(this);
 
 			if (visible[0]) {
-				$('a[href="#' + visible[0].attr('id') + '"]').removeClass('active');
+				$('a[href="#' + visible[0].attr('id') + '"]').parent('li').removeClass('active');
 				if ($this.data('scrollSpy:id') < visible[0].data('scrollSpy:id')) {
 					visible.unshift($(this));
 				}
@@ -2904,7 +2904,7 @@ if (jQuery) {
 			}
 
 
-			$('a[href="#' + visible[0].attr('id') + '"]').addClass('active');
+			$('a[href="#' + visible[0].attr('id') + '"]').parent('li').addClass('active');
 		});
 		selector.on('scrollSpy:exit', function() {
 			visible = $.grep(visible, function(value) {
@@ -2912,13 +2912,13 @@ if (jQuery) {
 	    });
 
 			if (visible[0]) {
-				$('a[href="#' + visible[0].attr('id') + '"]').removeClass('active');
+				$('a[href="#' + visible[0].attr('id') + '"]').parent('li').removeClass('active');
 				var $this = $(this);
 				visible = $.grep(visible, function(value) {
 	        return value.attr('id') != $this.attr('id');
 	      });
 	      if (visible[0]) { // Check if empty
-					$('a[href="#' + visible[0].attr('id') + '"]').addClass('active');
+					$('a[href="#' + visible[0].attr('id') + '"]').parent('li').addClass('active');
 	      }
 			}
 		});
