@@ -3,11 +3,11 @@ body {
 }
 
 nav {
-  background-color: #4d1a70 !important;
+  background-color: #395d88 !important;
 }
 
-.btn-floating {
-  background-color: #8f3191 !important;
+.page-footer {
+    background-color: #395d88 !important;
 }
 
 /* Computer screen*/
@@ -15,7 +15,10 @@ nav {
   .container {
     width: 100% !important;
   }
-
+  #hidden-float-helper {
+    float: right;
+    color: #aaa;
+  }
 
 }
 
@@ -30,19 +33,23 @@ nav {
     left: 43% !important;
   }
 
+  #hidden-float-helper {
+    display: none;
+  }
+
 }
 
 .m-h1 {
   font-weight: 600;
   font-size: 2.5em;
-  color: #4d1a70 !important;
+  color: #2e4b6d !important;
 }
 
 .m-link {
   position: relative;
   text-decoration: none;
   padding-bottom: 2px;
-  color: #8f3191;
+  color: #346bad;
 }
 
 .m-link:before {
@@ -52,7 +59,7 @@ nav {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #8f3191;
+  background-color: #346bad;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -76,7 +83,7 @@ nav {
 }
 
 #side-bg {
-  background-color: #451467;
+  background-color: #2e4b6d;
 }
 
 #side-img {
@@ -84,4 +91,46 @@ nav {
   width: 100px !important;
   margin-left: auto;
   margin-right: auto;
+}
+
+.action-chip {
+  cursor: pointer;
+    margin-bottom: 9px;
+}
+
+.action-chip:hover {
+  background-color: #d3d3d3;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+.chips-section {
+  text-align: center;
+}
+.action-chip:hover > img {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.action-chip:hover > img {
+  transform: scale(1.25);
+}
+.txt-red {
+  color: red;
+}
+.txt-green {
+  color: #27d600;
+}
+.txt-blue {
+  color: blue;
+}
+.txt-orange {
+  color: #d69700;
+}
+.txt-purple {
+  color: #4d1a70;
 }
