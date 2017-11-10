@@ -1,0 +1,93 @@
+.cont {
+  /*position: relative;*/
+}
+
+.box {
+  width: 110%;
+  height: 300px;
+  background-color: #ddd;
+  margin: auto;
+  padding: 0px !important;
+  position: fixed;
+  top: 150px;
+  left: -100px;
+  /*float: left;*/
+  /*position: absolute;*/
+  /*top: 100px;*/
+  /*left: 30px;*/
+}
+
+/*.box:hover {
+  width: 100%;
+}*/
+
+.animate {
+  /*-webkit-animation-name: squash;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-delay: 0;
+    -webkit-animation-timing-function: ease-out;*/
+  animation-fill-mode: forwards;
+  animation-name: squash, AnimationName;
+  animation-duration: 1s, 15s;
+  animation-iteration-count: 1, infinite;
+  /*animation-direction: alternate, alternate;*/
+  /*animation-delay: 0, 0;*/
+  timing-function: ease-in, ease;
+}
+
+@-webkit-keyframes squash {
+  from {
+    transform: skew(-50deg) rotate(-6deg) translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: skew(-50deg) rotate(-6deg) translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.animate2 {
+  background: repeating-linear-gradient(-45deg, red, blue);
+  background-size: 400% 400%;
+  /*-webkit-animation: AnimationName 5s ease infinite;
+  -moz-animation: AnimationName 5s ease infinite;
+  animation: AnimationName 5s ease infinite;*/
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
