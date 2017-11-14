@@ -31,23 +31,6 @@ html {
   left: 50%;
 }
 
-@-webkit-keyframes typing { to { width: 14em; } }
-@-webkit-keyframes blink-caret { 50% { border-color: red; } }
-
-h1 {
-    font: bold 300% Consolas, Monaco, monospace;
-    border-right: .1em solid red;
-    width: 0;
-    border-color: transparent;
-    margin: 2em 1em;
-    white-space: nowrap;
-    overflow: hidden;
-    -webkit-animation: typing 2s steps(21, end),
-    blink-caret .5s step-end infinite alternate;
-    -webkit-animation-delay: 2s, 2s;
-    animation-fill-mode: forwards;
-}
-
 .top-bar {
   height: 0px;
   max-height: 22px;
@@ -148,4 +131,33 @@ h1 {
 @-webkit-keyframes window-ver {
   from  {height: 0%;}
   to    {height: 100%;}
+}
+
+.typed::after {
+	content: '|';
+	display: inline;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+
+.typed-cursor{
+   opacity: 0;
+	display: none;
+}
+/*Custom cursor animation*/
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
