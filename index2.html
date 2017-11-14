@@ -18,11 +18,13 @@
   <div class="container">
       <div class="window window-animation">
         <div class="top-bar top-bar-animation">
-          <div class="circle red animated zoomIn"></div>
-          <div class="circle yellow animated zoomIn"></div>
-          <div class="circle green animated zoomIn"></div>
+          <div class="circle c-red animated zoomIn"></div>
+          <div class="circle c-yellow animated zoomIn"></div>
+          <div class="circle c-green animated zoomIn"></div>
         </div>
-        <span class='typed' style='color: white; white-space:pre;'></span>
+        <div class="window-text">
+          <span class='typed' style='white-space:pre;'></span>
+        </div>
       </div>
 
   </div>
@@ -30,14 +32,19 @@
   $(function(){
 	$(".typed").typed({
 		strings: [
-        '<span style="color: red;">npm</span> install^100\n' +
-        'installing components...^1000\n' +
-        'Fetching from source...'
+        '<span class="purple">import</span> <a class="nohref" href="https://www.python.org/dev/peps/pep-0020/#id3">this</a> ^200 <span class="gray italic"># noqa</span>\n' +
+        '^300\n' +
+        '<span class="purple">from</span> django.db.models <span class="purple">import</span> Backend^200,^300 User\n' +
+        '<span class="purple">from</span> ^500geolocation.google_maps <span class="purple">import</span> GoogleMaps\n' +
+        '<span class="purple">from</span> python3.peps <span class="purple">import</span> <span class="orange">PEP8^500</span>\n' +
+        '^300\n' +
+        '^300\n' +
+        '<span class="purple">class</span> <span class="yellow">DenisKrumko(</span><span class="blue">object</span><span class="yellow">)</span>:'
     ],
 		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
 		stringsElement: null,
 		// typing speed
-		typeSpeed: 60,
+		typeSpeed: 0,
 		// time before typing starts
 		startDelay: 3500,
 		// backspacing speed
@@ -50,6 +57,7 @@
 		loopCount: 5,
 		// show cursor
 		showCursor: false,
+    smartBackspace: true,
 		// character for cursor
 		cursorChar: "|",
 		// attribute to type (null == text)

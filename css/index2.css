@@ -71,19 +71,19 @@ html {
   filter: brightness(90%);
 }
 
-.red {
+.c-red {
   background-color: #fc4646;
     -webkit-animation-delay: 1.2s; /* Safari 4.0 - 8.0 */
       animation-delay: 2.7s;
 }
 
-.yellow {
+.c-yellow {
   background-color: #fdb024;
     -webkit-animation-delay: 1.3s; /* Safari 4.0 - 8.0 */
       animation-delay: 3.0s;
 }
 
-.green {
+.c-green {
   background-color: #28c331;
     -webkit-animation-delay: 1.4s; /* Safari 4.0 - 8.0 */
       animation-delay: 3.3s;
@@ -160,4 +160,44 @@ html {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+.window-text {
+  color: #A6ADB9;
+  font-family: 'Iosevka-term';
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  padding: 10px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.nohref {
+  text-decoration: none;
+  color: #A6ADB9;
+}
+.purple {
+  color: #C774E0;
+}
+
+.gray {
+  color: #5C6370;
+}
+
+.orange {
+  color: #D39A61;
+}
+
+.yellow {
+  color: #DBB973;
+}
+
+.blue {
+  color: #51B6C3;
+}
+
+.green {
+  color: #96C475;
 }
