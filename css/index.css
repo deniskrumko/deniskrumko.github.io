@@ -1,136 +1,214 @@
 body {
-  background-color: #f9f9f9 !important;
+  /*position: relative;*/
+  background-color: #1c1f25 !important;
 }
 
-nav {
-  background-color: #395d88 !important;
+.container {
+  max-width: 900px !important;
+  margin-top: 100px;
 }
 
-.page-footer {
-    background-color: #395d88 !important;
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
 }
 
-/* Computer screen*/
-@media only screen and (min-width: 990px) {
-  .container {
-    width: 100% !important;
-  }
-  #hidden-float-helper {
-    float: right;
-    color: #aaa;
-  }
-
-}
-
-/* Mobile screen */
-@media only screen and (max-width: 990px) {
-  .container {
-    width: 95% !important;
-  }
-
-  .brand-logo {
-    font-size: 1.4em !important;
-    left: 43% !important;
-  }
-
-  #hidden-float-helper {
-    display: none;
-  }
-
-}
-
-.m-h1 {
-  font-weight: 600;
-  font-size: 2.5em;
-  color: #2e4b6d !important;
-}
-
-.m-link {
-  position: relative;
-  text-decoration: none;
-  padding-bottom: 2px;
-  color: #346bad;
-}
-
-.m-link:before {
-  content: "";
+.window {
   position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #346bad;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.2s ease-in-out 0s;
-  transition: all 0.2s ease-in-out 0s;
+  background: #00a7ff;
+  color: white;
+  width: 3px;
+  height: 3px;
+  max-height: 700px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  max-width: 1000px;
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 
-.m-link:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-.brand-logo {
-  font-family: "Nunito";
-  font-size: 1.7em !important;
-}
-
-#sidenav-overlay {
-  z-index: 996 !important;
-}
-
-#side-bg {
-  background-color: #2e4b6d;
-}
-
-#side-img {
-  height: 100px !important;
-  width: 100px !important;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.action-chip {
-  cursor: pointer;
-    margin-bottom: 9px;
-}
-
-.action-chip:hover {
-  background-color: #d3d3d3;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-     -moz-user-select: none; /* Firefox */
-      -ms-user-select: none; /* Internet Explorer/Edge */
-          user-select: none; /* Non-prefixed version, currently
-                                supported by Chrome and Opera */
-}
-
-.chips-section {
+.top-bar {
+  height: 0px;
+  max-height: 22px;
+  background: linear-gradient(#e3e3e3 , #cecece);
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  color: black;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding-left: 10px;
   text-align: center;
 }
-.action-chip:hover > img {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+
+.top-bar-title {
+  width: 100%;
+  text-align: center;
 }
-.action-chip:hover > img {
-  transform: scale(1.25);
+
+.circle {
+  border-radius: 50px;
+  width: 14px;
+  height: 14px;
+  margin-left: 2px;
+  float:left;
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,0.2);
+  box-shadow: inset 1px 1px 1px rgba(255,255,255,0.2);
+  margin-left: 5px;
+  margin-top: 4px;
 }
-.txt-red {
-  color: red;
+
+.fadeInUp {
+    -webkit-animation-duration: 1.2s !important; /* Safari 4.0 - 8.0 */
+    animation-duration: 1.2s !important;
+    -webkit-animation-delay: 0.3s; /* Safari 4.0 - 8.0 */
 }
-.txt-green {
-  color: #27d600;
+
+.zoomIn {
+    -webkit-animation-duration: 0.5s !important; /* Safari 4.0 - 8.0 */
+    animation-duration: 0.5s !important;
+    -webkit-animation-timing-function: ease-out; /* Safari 4.0 - 8.0 */
+    animation-timing-function: ease-out;
 }
-.txt-blue {
-  color: blue;
+
+.circle:hover {
+  filter: brightness(90%);
 }
-.txt-orange {
-  color: #d69700;
+
+.title {
+      animation-delay: 3.3s;
 }
-.txt-purple {
-  color: #4d1a70;
+
+.c-red {
+  background-color: #fc4646;
+    -webkit-animation-delay: 1.2s; /* Safari 4.0 - 8.0 */
+      animation-delay: 2.7s;
+}
+
+.c-yellow {
+  background-color: #fdb024;
+    -webkit-animation-delay: 1.3s; /* Safari 4.0 - 8.0 */
+      animation-delay: 3.0s;
+}
+
+.c-green {
+  background-color: #28c331;
+    -webkit-animation-delay: 1.4s; /* Safari 4.0 - 8.0 */
+      animation-delay: 3.3s;
+}
+
+.user {
+  font-size: 100px;
+  font-family: Merriweather;
+}
+
+.window-animation {
+  animation-fill-mode: forwards;
+  animation-name: window-up, window-ver, window-hor;
+  animation-duration: 1s, 0.5s, 0.5s;
+  animation-iteration-count: 1, 1, 1;
+  animation-delay: 0s, 1s, 1.5s;
+  timing-function: ease-out, ease-out, ease-out;
+}
+
+.top-bar-animation {
+  animation-fill-mode: forwards;
+  animation-name: top-bar-slide;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-delay: 2.2s;
+  timing-function: ease-in;
+}
+
+@-webkit-keyframes top-bar-slide {
+  from  {height: 0%;}
+  to    {height: 100%;}
+}
+
+@-webkit-keyframes window-up {
+  from  {opacity: 0; top: 100%;}
+  to    {opacity: 1; top: 50%;}
+}
+
+@-webkit-keyframes window-hor {
+  0%   {background: #00a7ff; width: 0%;}
+  40%  {background: #2a2e38;}
+  100% {background: #2a2e38; width: 100%;}
+}
+
+@-webkit-keyframes window-ver {
+  from  {height: 0%;}
+  to    {height: 100%;}
+}
+
+.typed::after {
+	content: '|';
+	display: inline;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+
+.typed-cursor{
+   opacity: 0;
+	display: none;
+}
+/*Custom cursor animation*/
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.window-text {
+  color: #A6ADB9;
+  font-family: 'Iosevka-term';
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  padding: 10px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.nohref {
+  text-decoration: none;
+  color: #A6ADB9;
+}
+.purple {
+  color: #C774E0;
+}
+
+.gray {
+  color: #5C6370;
+}
+
+.orange {
+  color: #D39A61;
+}
+
+.yellow {
+  color: #DBB973;
+}
+
+.blue {
+  color: #51B6C3;
+}
+
+.green {
+  color: #96C475;
 }
