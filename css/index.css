@@ -68,8 +68,8 @@ html {
 }
 
 .zoomIn {
-    -webkit-animation-duration: 0.5s !important; /* Safari 4.0 - 8.0 */
-    animation-duration: 0.5s !important;
+    -webkit-animation-duration: 0.4s !important; /* Safari 4.0 - 8.0 */
+    animation-duration: 0.4s !important;
     -webkit-animation-timing-function: ease-out; /* Safari 4.0 - 8.0 */
     animation-timing-function: ease-out;
 }
@@ -78,26 +78,91 @@ html {
   filter: brightness(90%);
 }
 
+.typed {
+  -webkit-animation-delay: 3.3s; /* Safari 4.0 - 8.0 */
+    animation-delay: 3.3s;
+}
+
 .title {
-      animation-delay: 3.3s;
+  -webkit-animation-delay: 2.7s; /* Safari 4.0 - 8.0 */
+    animation-delay: 2.7s;
+}
+
+.icon {
+  height: 20px;
+  padding-right: 5px;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 8px;
+}
+
+.active {
+  color: #ddd;
+}
+
+.active img {
+   -webkit-filter: brightness(150%);
+   filter: brightness(150%);
+  }
+.left-menu {
+    float: left;
+    height: calc(100% - 22px);
+    background: #21252b;
+    /*padding: 15px;*/
+    font-family: "Iosevka";
+    font-size: 17px;
+    color: #999;
+    width: 0px;
+    -webkit-font-smoothing: antialiased;
+    /*margin-right: 20px;*/
+    /*border-right: 1px solid #1e1f25;*/
+    border-bottom-left-radius: 5px;
+
+    animation-fill-mode: forwards;
+    animation-name: left-menu-animation, left-menu-border-animation;
+    animation-duration: 1s, 1s;
+    animation-iteration-count: 1, 1;
+    animation-delay: 3.3s, 3.5s;
+    timing-function: ease-out, ease-out;
+}
+
+.li1 {
+    -webkit-animation-delay: 3.7s; /* Safari 4.0 - 8.0 */
+      animation-delay: 3.7s;
+}
+
+.li2 {
+    -webkit-animation-delay: 3.8s; /* Safari 4.0 - 8.0 */
+      animation-delay: 3.8s;
+}
+
+.li3 {
+    -webkit-animation-delay: 3.9s; /* Safari 4.0 - 8.0 */
+      animation-delay: 3.9s;
 }
 
 .c-red {
   background-color: #fc4646;
-    -webkit-animation-delay: 1.2s; /* Safari 4.0 - 8.0 */
-      animation-delay: 2.7s;
+    -webkit-animation-delay: 2.3s; /* Safari 4.0 - 8.0 */
+      animation-delay: 2.3s;
 }
 
 .c-yellow {
   background-color: #fdb024;
-    -webkit-animation-delay: 1.3s; /* Safari 4.0 - 8.0 */
-      animation-delay: 3.0s;
+    -webkit-animation-delay: 2.4s; /* Safari 4.0 - 8.0 */
+      animation-delay: 2.4s;
 }
 
 .c-green {
   background-color: #28c331;
-    -webkit-animation-delay: 1.4s; /* Safari 4.0 - 8.0 */
-      animation-delay: 3.3s;
+    -webkit-animation-delay: 2.5s; /* Safari 4.0 - 8.0 */
+      animation-delay: 2.5s;
 }
 
 .user {
@@ -119,8 +184,18 @@ html {
   animation-name: top-bar-slide;
   animation-duration: 5s;
   animation-iteration-count: 1;
-  animation-delay: 2.2s;
-  timing-function: ease-in;
+  animation-delay: 1.9s;
+  timing-function: ease-out;
+}
+
+@-webkit-keyframes left-menu-animation {
+  from  {width: 0px;}
+  to    {width: 180px; padding: 15px; margin-right: 20px; }
+}
+
+@-webkit-keyframes left-menu-border-animation {
+  from {border-right: 1px solid transparent;}
+  to {border-right: 1px solid #1e1f25;}
 }
 
 @-webkit-keyframes top-bar-slide {

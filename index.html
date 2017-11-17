@@ -19,37 +19,51 @@
   <div class="container">
       <div class="window window-animation">
         <div class="top-bar top-bar-animation">
-          <span class="title animated zoomIn">Text</span>
+          <span class="title animated fadeIn">main.py</span>
           <div class="circle c-red animated zoomIn"></div>
           <div class="circle c-yellow animated zoomIn"></div>
           <div class="circle c-green animated zoomIn"></div>
-          <!-- <div class="top-bar-title"></div> -->
+        </div>
+        <div class="left-menu">
+          <ul>
+            <li class="active animated zoomIn li1"><img src="images/file.png" class="icon">main.py</li>
+            <li class="animated zoomIn li2"><img src="images/file.png" class="icon">social.py</li>
+            <li class="animated zoomIn li3"><img src="images/file.png" class="icon">about.py</li>
+          </ul>
         </div>
         <div class="window-text">
-          <span class='typed' style='white-space:pre;'></span>
+          <span class='typed animated fadeIn' style='white-space:pre;'></span>
         </div>
       </div>
 
   </div>
   <script type="text/javascript">
+
   $(function(){
 	$(".typed").typed({
 		strings: [
-        '<span class="purple">1import</span> <a class="nohref" href="https://www.python.org/dev/peps/pep-0020/#id3">this</a> ^200 <span class="gray italic"># noqa</span>\n' +
+        '<span class="purple">import</span> <a class="nohref" href="https://www.python.org/dev/peps/pep-0020/#id3">this</a> ^200 <span class="gray italic"># noqa</span>\n' +
         '^300\n' +
         '<span class="purple">from</span> django.db.models <span class="purple">import</span> Backend^200,^300 User\n' +
         '<span class="purple">from</span> ^500geolocation.google_maps <span class="purple">import</span> GoogleMaps\n' +
         '<span class="purple">from</span> python3.peps <span class="purple">import</span> <span class="orange">PEP8^500</span>\n' +
         '^300\n' +
         '^300\n' +
-        '<span class="purple">class</span> <span class="yellow">DenisKrumko(</span><span class="blue">object</span><span class="yellow">)</span>:'
+        '<span class="purple">class</span> <span class="yellow">DenisKrumko(</span><span class="blue">object</span><span class="yellow">)</span>:\n' +
+        '    <span class="green">"""Some information about one person (me).</span>\n' +
+        '^300\n' +
+        '    <span class="green">Welcome to my small web page, guys! I hope you understand something here.</span>\n' +
+        '    <span class="green">Yes, this is Python. If you don\'t want to read this mess - click here.</span>\n' +
+        '^300\n' +
+        '    <span class="green">"""</span>\n' +
+        '    user = User(<span class="yellow">name</span>=<span class="green">\'Denis Krumko\'</span>, <span class="yellow">email</span>=<span class="green">\'dkrumko@gmail.com\'</span>)\n'
     ],
 		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
 		stringsElement: null,
 		// typing speed
 		typeSpeed: 0,
 		// time before typing starts
-		startDelay: 3500,
+		startDelay: 4500,
 		// backspacing speed
 		backSpeed: 20,
 		// time before backspacing
