@@ -8,7 +8,7 @@
   <link type="text/css" rel="stylesheet" href="css/index.css" />
   <link type="text/css" rel="stylesheet" href="css/animate.css" />
   <link type="text/css" rel="stylesheet" href="css/animations.css" />
-  
+
   <link href="https://fonts.googleapis.com/css?family=Merriweather:900" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -21,32 +21,34 @@
   <div class="container">
       <div class="window window-animation">
         <div class="top-bar top-bar-animation">
-          <span class="title animated fadeIn">main.py</span>
+          <span class="title animated fadeIn">links.py</span>
           <div class="circle c-red animated zoomIn"></div>
           <div class="circle c-yellow animated zoomIn"></div>
           <div class="circle c-green animated zoomIn"></div>
         </div>
         <div class="left-menu left-menu-animated">
-          <ul>
-            <li>
-              <a class="active animated zoomIn li1" href="/">
-                <img src="images/file.png" class="icon">
-                main.py
-              </a>
-            </li>
-            <li>
-              <a class="inactive animated zoomIn li2" href="/links">
-                <img src="images/file.png" class="icon">
-                links.py
-              </a>
-            </li>
-            <li>
-              <a class="inactive animated zoomIn li3" href="/about">
-                <img src="images/file.png" class="icon">
-                about.py
-              </a>
-            </li>
-          </ul>
+          <div class="left-menu left-menu-animated">
+            <ul>
+              <li>
+                <a class="inactive animated zoomIn li1" href="/">
+                  <img src="images/file.png" class="icon">
+                  main.py
+                </a>
+              </li>
+              <li>
+                <a class="active animated zoomIn li2" href="/links">
+                  <img src="images/file.png" class="icon">
+                  links.py
+                </a>
+              </li>
+              <li>
+                <a class="inactive animated zoomIn li3" href="/about">
+                  <img src="images/file.png" class="icon">
+                  about.py
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="window-text">
           <span class='typed animated fadeIn' style='white-space:pre;'></span>
@@ -67,7 +69,7 @@
         '    <span class="green">"""Some infor^150mation about me.</span>\n' +
         '^700\n' +
         '    <span class="green">Welcome to my small web page, guys!^400 I hope you unde^150rstand something here.</span> ^300\n' +
-        '    <span class="green">Yes, this is Python.^400 If you don\'t want to read this mess - <a href="/all-info" class="green">click here</a>.</span>\n' +
+        '    <span class="green">Yes, this is Python.^400 If you don\'t want to read this mess - <a href="/about" class="green">click here</a>.</span>\n' +
         '^500\n' +
         '    <span class="green">"""</span>\n' +
         '    user = User(^200<span class="yellow">name</span>=<span class="green">\'Denis Krumko\'</span>,^300 <span class="yellow">email</span>=<span class="green">\'dkrumko@gmail.com\'</span>)^400\n' +
