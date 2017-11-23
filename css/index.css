@@ -138,13 +138,13 @@ li {
 }
 
 .li2 {
-    -webkit-animation-delay: 3.8s; /* Safari 4.0 - 8.0 */
-      animation-delay: 3.8s;
+    -webkit-animation-delay: 3.9s; /* Safari 4.0 - 8.0 */
+      animation-delay: 3.9s;
 }
 
 .li3 {
-    -webkit-animation-delay: 3.9s; /* Safari 4.0 - 8.0 */
-      animation-delay: 3.9s;
+    -webkit-animation-delay: 4.1s; /* Safari 4.0 - 8.0 */
+      animation-delay: 4.1s;
 }
 
 .c-red {
@@ -277,7 +277,7 @@ li {
 }
 
 .yellow {
-  color: #DBB973;
+  color: #e2b06e;
 }
 
 .blue {
