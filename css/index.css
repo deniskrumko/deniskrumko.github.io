@@ -65,6 +65,11 @@ html {
   text-align: center;
 }
 
+.title {
+  font-size: 14px;
+  vertical-align: top;
+}
+
 .top-bar-title {
   width: 100%;
   text-align: center;
