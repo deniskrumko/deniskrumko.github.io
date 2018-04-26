@@ -1,119 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<link rel="shortcut icon" target="_blank" href="images/favicon.png">
+		<title>Denis Krumko</title>
+		<meta name="description" content="Вы находитесь на странице, где Денис Крумко (Denis Krumko) собрал ссылки на основные свои аккаунты, чтобы его можно было легче найти. Но лучше не ищите его."/>
 
-<head>
-  <meta charset="utf-8">
-  <title>Denis Krumko</title>
-  <link rel="shortcut icon" href="images/term.png">
-  <meta name="description" content="Hi, my name is Denis Krumko. Also known as Denis Krumko. Half developer, half designer. Can talk Python language. Also can talk like normal human." />
-  <link type="text/css" rel="stylesheet" href="css/fonts.css" />
-  <link type="text/css" rel="stylesheet" href="css/index.css" />
-  <link type="text/css" rel="stylesheet" href="css/animate.css" />
-  <link type="text/css" rel="stylesheet" href="css/animations.css" />
+		<!-- CSS AND JS -->
+		<script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
+		<link rel="stylesheet" href="css/semantic.min.css">
+		<script src="js/semantic.min.js"></script>
+		<link rel="stylesheet" href="css/base.css">
+	</head>
+	<body>
 
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:900" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js" crossorigin="anonymous"></script>
-</head>
+		<div class="ui container">
 
-<body>
-  <div class="container">
-    <div class="window window-animation">
-      <div class="top-bar top-bar-animation">
-        <span class="title animated fadeIn">main.py</span>
-        <div class="circle c-red animated zoomIn"></div>
-        <div class="circle c-yellow animated zoomIn"></div>
-        <div class="circle c-green animated zoomIn"></div>
-      </div>
-      <div class="left-menu left-menu-animated">
-        <ul>
-          <li>
-            <a class="active animated zoomIn li1" href="/">
-                <img src="images/file.png" class="icon">
-                main.py
-              </a>
-          </li>
-          <li>
-            <a class="inactive animated zoomIn li2" href="/links">
-                <img src="images/file.png" class="icon">
-                links.py
-              </a>
-          </li>
-          <li>
-            <a class="inactive animated zoomIn li3" href="/about">
-                <img src="images/file.png" class="icon">
-                about.py
-              </a>
-          </li>
-        </ul>
-      </div>
-      <div class="window-text">
-        <span class='typed animated fadeIn' style='white-space:pre;'></span>
-      </div>
-    </div>
+			<h1 class="dk">Denis Krumko</h1>
+			<h2 class="dk2">Также известный, как Денис Крумко</h2>
 
-  </div>
-  <script type="text/javascript">
-    $(function() {
-      $(".typed").typed({
-        strings: [
-          '<span class="purple">from</span> django.db.models^200 <span class="purple">import</span> Backend^200, User^300\n' +
-          '<span class="purple">from</span> ^500geoloc^300ation.google_maps^300 <span class="purple">import</span> GoogleMaps\n' +
-          '^300\n' +
-          '^700\n' +
-          '<span class="purple">class</span> <span class="yellow">DenisKrumko(</span>object<span class="yellow">)</span>:\n' +
-          '    <span class="green">"""Some infor^150mation about me.</span>\n' +
-          '^700\n' +
-          '    <span class="green">Welcome to my small web page, guys!^400 I hope you unde^150rstand something here.</span> ^300\n' +
-          '    <span class="green">Yes, this is Python.^400 If you don\'t want to read this mess - <a href="/about" class="green">click here</a>.</span>\n' +
-          '^500\n' +
-          '    <span class="green">"""</span>\n' +
-          '    user = User(^200<span class="yellow">name</span>=<span class="green">\'Denis Krumko\'</span>,^300 <span class="yellow">email</span>=<span class="green">\'dkrumko@gmail.com\'</span>)^400\n' +
-          '    user.^300location = GoogleMaps(<span class="yellow">city</span>=<span class="green">\'Saint Petersburg\'</span>, <span class="yellow">country</span>=<span class="green">\'Russia\'</span>)\n' +
-          '    user.^400stack = (<span class="green">\'Python\'</span>,^300 <span class="green">\'Django\'</span>, <span class="green">\'Django Rest Framework\'</span>)^400\n' +
-          '    user.^300likes = ^500(<span class="green">\'Good code + PEP8\'</span>,^300 <span class="green">\'Making tests\'</span>,^400 <span class="green">\'Nice documentation\'</span>)^400\n' +
-          '    user.^400jobs = ^400{\n' +
-          '        <span class="green">\'2016 - 2017\'</span>: Backend(<span class="yellow">at</span>=<a class="green" href="https://www.saritasa.com/">\'Saritasa\'</a>),^500\n' +
-          '        <span class="green">\'2017 - ... \'</span>:^400 Backend(<span class="yellow">at</span>=<a class="green" href="https://www.homecredit.ru/">\'Home Credit Bank\'</a>),\n' +
-          '    }'
-        ],
-        // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
-        stringsElement: null,
-        // typing speed
-        typeSpeed: 0,
-        // time before typing starts
-        startDelay: 4500,
-        // backspacing speed
-        backSpeed: 20,
-        // time before backspacing
-        backDelay: 500,
-        // loop
-        loop: false,
-        // false = infinite
-        loopCount: 5,
-        // show cursor
-        showCursor: false,
-        smartBackspace: true,
-        // character for cursor
-        cursorChar: "|",
-        // attribute to type (null == text)
-        attr: null,
-        // either html or text
-        contentType: 'html',
-        // call when done callback function
-        callback: function() {},
-        // starting callback function before each string
-        preStringTyped: function() {},
-        //callback for every typed string
-        onStringTyped: function() {},
-        // callback for reset
-        resetCallback: function() {}
-      });
-    });
-  </script>
-</body>
+			<div class="ui three stackable cards">
 
+				<!-- Twitter -->
+				<a class="ui card" target="_blank" href="https://twitter.com/deniskrumko">
+				  <div class="content">
+				    <div class="header"><i class="twitter icon"></i>Twitter</div>
+				    <div class="meta">
+				      <span class="category">@deniskrumko</span>
+				    </div>
+				    <div class="description">
+				      <p>Просто мысли. Пишу редко. Больше люблю читать.</p>
+				    </div>
+				  </div>
+				</a>
+
+				<!-- Instagram -->
+				<a class="ui card" target="_blank" href="https://www.instagram.com/deniskrumko/">
+				  <div class="content">
+				    <div class="header"><i class="instagram icon"></i>Instagram</div>
+				    <div class="meta">
+				      <span class="category">@deniskrumko</span>
+				    </div>
+				    <div class="description">
+				      <p>Себя не особо фотографирую. Но окружающий мир - да.</p>
+				    </div>
+				  </div>
+				</a>
+
+				<!-- Dendy Not Dead -->
+				<a class="ui card" target="_blank" href="https://deniskrumko.github.io/dendynotdead">
+				  <div class="content">
+				    <div class="header"><i class="headphones icon"></i>Dendy Not Dead</div>
+				    <div class="meta">
+				      <span class="category">dendynotdead.herokuapp.com</span>
+				    </div>
+				    <div class="description">
+				      <p>Иногда я сочиняю музыку. Если это можно назвать музыкой.</p>
+				    </div>
+				  </div>
+				</a>
+
+				<!-- Telegram -->
+				<a class="ui card" target="_blank" href="http://t.me/deniskrumko">
+					<div class="content">
+						<div class="header"><i class="telegram plane icon"></i>Telegram</div>
+						<div class="meta">
+							<span class="category">@deniskrumko</span>
+						</div>
+						<div class="description">
+							<p>Если найдете способ зайти в Telegram, то пишите.</p>
+						</div>
+					</div>
+				</a>
+
+				<!-- Github -->
+				<a class="ui card" target="_blank" href="https://github.com/deniskrumko">
+				  <div class="content">
+				    <div class="header"><i class="github icon"></i>Github</div>
+				    <div class="meta">
+				      <span class="category">@deniskrumko</span>
+				    </div>
+				    <div class="description">
+				      <p>Молодой и небесперспективный Python разработчик.</p>
+				    </div>
+				  </div>
+				</a>
+
+				<!-- Stack Overflow -->
+				<a class="ui card" target="_blank" href="https://stackoverflow.com/users/8805769/denis-krumko">
+				  <div class="content">
+				    <div class="header"><i class="stack overflow icon"></i>Stack Overflow</div>
+				    <div class="meta">
+				      <span class="category">Denis Krumko</span>
+				    </div>
+				    <div class="description">
+				      <p>Ищущий да найдет. А если не найдет - то пиши пропало.</p>
+				    </div>
+				  </div>
+				</a>
+
+				<!-- Reddit -->
+				<a class="ui card" target="_blank" href="https://www.reddit.com/u/pydendy">
+				  <div class="content">
+				    <div class="header"><i class="reddit alien icon"></i>Reddit</div>
+				    <div class="meta">
+				      <span class="category">@pydendy</span>
+				    </div>
+				    <div class="description">
+				      <p>Тут я редкий гость, но гостить не забываю.</p>
+				    </div>
+				  </div>
+				</a>
+
+				<!-- YouTube -->
+				<a class="ui card" target="_blank" href="https://www.youtube.com/user/obshaga8">
+				  <div class="content">
+				    <div class="header"><i class="youtube icon"></i>YouTube</div>
+				    <div class="meta">
+				      <span class="category">@obshaga8</span>
+				    </div>
+				    <div class="description">
+				      <p>Иногда что-то выкладываю. В основном, все банят.</p>
+				    </div>
+				  </div>
+				</a>
+
+				<!-- Twitch -->
+				<a class="ui card" target="_blank" href="https://www.twitch.tv/deniskrumko">
+				  <div class="content">
+				    <div class="header"><i class="twitch icon"></i>Twitch</div>
+				    <div class="meta">
+				      <span class="category">@deniskrumko</span>
+				    </div>
+				    <div class="description">
+				      <p>Только смотрю. Стримить-то мне не с чего.</p>
+				    </div>
+				  </div>
+				</a>
+
+			</div>
+
+			<p class="ps">Если все эту штуки слишком крутые - то пишите на <a target="_blank" href="mailto:dkrumko@gmail.com">dkrumko@gmail.com</a> </p>
+
+		</div>
+	</body>
 </html>
