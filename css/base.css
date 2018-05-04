@@ -1,1 +1,50 @@
-.dk{color:#00b5ad!important;padding-top:20px;margin-bottom:0}.dk2{color:rgba(0,0,0,.68);font-size:14px;font-weight:400!important;margin-top:5px;margin-bottom:30px}.ui.container{max-width:800px!important}.header{color:#00b5ad!important;font-weight:600!important}.ps,.ps a{color:rgba(0,0,0,.4)}.ps{padding-top:20px;padding-bottom:30px;text-align:center}.ps a{text-decoration:underline;transition:all .3s ease}.ps a:hover{color:#00b5ad!important}
+.dk {
+  color: #00b5ad !important;
+  padding-top: 20px;
+  margin-bottom: 0
+}
+
+.dk2 {
+  color: rgba(0, 0, 0, .68);
+  font-size: 14px;
+  font-weight: 400 !important;
+  margin-top: 5px;
+  margin-bottom: 0px
+}
+
+.dk3 {
+  color: rgba(0, 0, 0, .68);
+  font-size: 12px;
+  font-weight: 400 !important;
+  color: rgba(0, 0, 0, .4);
+  margin-top: 5px;
+  margin-bottom: 30px
+}
+
+.ui.container {
+  max-width: 800px !important
+}
+
+.header {
+  color: #00b5ad !important;
+  font-weight: 600 !important
+}
+
+.ps, .ps a {
+  color: rgba(0, 0, 0, .4)
+}
+
+.ps {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: center
+}
+
+.ps a {
+  text-decoration: underline;
+  transition: all .3s ease
+}
+
+.ps a:hover {
+  color: #00b5ad !important
+}
