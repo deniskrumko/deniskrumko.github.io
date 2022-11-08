@@ -5,155 +5,201 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	<link rel="shortcut icon" target="_blank" href="images/favicon.png">
-	<title>Denis Krumko</title>
+
+  <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="static/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="static/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="static/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="static/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="static/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="static/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="static/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="static/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="static/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="static/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="static/favicon/manifest.json">
+
+  <!-- Meta -->
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="static/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#1B2430">
+
+  <!-- Title and description -->
+	<title>Денис Крумко</title>
 	<meta name="description" content="Это страница, где Денис Крумко собрал ссылки на свои аккаунты, чтобы его было легче найти. Но лучше не ищите его." />
 
 	<!-- CSS AND JS -->
-	<link rel="stylesheet" href="css/semantic.min.css">
-	<link rel="stylesheet" href="css/base.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
+  <link rel="stylesheet" href="static/styles/index.css">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="static/fonts/BloggerSans/stylesheet.css">
+  <link rel="stylesheet" href="static/fonts/Rubik/stylesheet.css">
 </head>
 
 <body>
-  <div style="width: 100%; background: #184E41; color: white; text-align: center;">
-    <div style="padding: 20px; font-size: 18px; line-height: 30px;">
-      Я закрыл свой старый сайт deniskrumko.ru, потому что heroku перестает его хостить.
-      <br>
-      Скоро сюда перенесется вся инфа и станет классно. Ну а пока только вот так))
+ <main>
+  <div class="menu container pure-g">
+    <div class="pure-u-6-24 pure-u-sm-3-24">
+      <a href="/">
+        <img src="static/images/logo_white.png" alt="DK" id="menu-logo">
+      </a>
+    </div>
+    <div class="pure-u-18-24 pure-u-sm-21-24" id="desktop-menu-items">
+      <a href="#video" class="">
+        ВИДЕО
+      </a>
+      <a href="#music" class="">
+        МУЗЫКА
+      </a>
+      <a href="#social" class="">
+        СОЦСЕТИ
+      </a>
     </div>
   </div>
+  <br>
 
-	<div class="ui container dkcontainer">
+  <div class="container">
+    <div class="pure-g index-wide-block">
+      <div class="pure-u-1-1 pure-u-sm-2-5 pure-u-md-2-5">
+        <a class="block-img" href="{% url 'video:detail' last_video.slug %}">
+          <img src="static/images/me4.jpg" alt="It's me">
+        </a>
+        <div class="index-faded" style="margin-top: 10px;">
+          Я тот гном слева
+        </div>
+      </div>
+
+      <div class="pure-u-1-1 pure-u-sm-3-5 pure-u-md-3-5">
+        <div class="index-left-margin">
+          <h1>Привет</h1>
+          <span class="index-icon">👋</span>
+          <br><br>
+          <div class="index-text index-left-margin">
+            Меня зовут <b>Денис Крумко</b>, очень приятно :)
+            <br>
+            И так, вас каким-то образом занесло на мой сайт.
+            <br><br>
+            Предлагаю немного поскроллить страничку, и посмотреть, что у меня тут есть ⬇️
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pure-g index-wide-block">
+      <div class="pure-u-1-1 pure-u-sm-3-5 pure-u-md-3-5">
+        <div class="">
+          <div class="index-small-text">
+            Например, я иногда снимаю и выкладываю...
+          </div>
+          <a href="https://youtube.com/@dkrumko" class="index-section-a">
+            <h1 id="video">видео</h1>
+            <span class="index-icon">🔥</span>
+          </a>
+
+          <br><br>
+          <div class="index-text index-left-margin index-right-margin">
+            Путешествия там, обзоры иногда, про музыку и все такое.
+            Все видео стараюсь выкладывать на своем <a href="https://youtube.com/@dkrumko">YouTube канале</a>. Заходите, подписывайтесь ✌️
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <div class="pure-u-1-1 pure-u-sm-2-5 pure-u-md-2-5">
+        <a class="block-img" href="https://youtube.com/@dkrumko">
+          <img src="static/images/kzvideo.jpg" alt="Заметки о Казахстане">
+        </a>
+        <div class="index-faded" style="margin-top: 10px;">
+          "Заметки о Казахстане" пока самое популярное видео :)
+        </div>
+      </div>
+      <div class="pure-u-1-1">
+        <div class="index-links-block">
+          <div class="index-text">
+            Все, что нельзя загружать на YouTube, я выкладываю на
+            <a href="https://zen.yandex.ru/deniskrumko">Яндекс.Дзен</a> 👀
+          </div>
+        </div>
+      </div>
+    </div>
 
 
+    <div class="pure-g index-wide-block">
+      <div class="pure-u-1-1 pure-u-sm-2-5 pure-u-md-2-5">
+        <a class="block-img" href="{% url 'video:detail' last_video.slug %}">
+          <img src="static/images/polystra.jpg" alt="It's me">
+        </a>
+        <br>
+      </div>
 
-		<h1 class="dk">Denis Krumko</h1>
-		<h2 class="dk2">Также известный, как Денис Крумко</h2>
-		<h3 class="dk3">Еще менее известный, как Dendy</h3>
+      <div class="pure-u-1-1 pure-u-sm-3-5 pure-u-md-3-5">
+        <div class="index-left-margin">
+          <div class="index-small-text">
+            Особое место в моем сердечке занимает
+          </div>
+          <a href="https://www.youtube.com/channel/UCbVIrtVCFAuqsG28c2tBdkw" class="index-section-a">
+            <h1 id="music">музыка</h1>
+            <span class="index-icon">🤘</span>
+          </a>
+          <br><br>
+          <div class="index-text">
+            Да, я сочиняю музыку, но так вышло, что никуда ее пока не могу загрузить.
+            Есть мой старый канал <a href="https://www.youtube.com/user/dendynotdead">Dendy Not Dead</a>, но я туда уже ничего не добавляю.
+            <br><br>
+            Также накопилось прилично записей с репетиций, где мы играем каверы,
+            все они есть на канале <a href="https://www.youtube.com/channel/UCbVIrtVCFAuqsG28c2tBdkw">Polystra Music</a>.
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="index-text index-faded center">
+      ✨ На этом пока все ✨
+    </div>
 
-		<div class="ui three stackable cards">
+  </div>
+ </main>
+ <footer>
+  <div class="container">
+    <div class="pure-g">
+      <div class="pure-u-1-1 pure-u-md-1-3 footer-block">
+        <b id="social">Соцсеточки</b>
+        <a href="https://t.me/deniskrumko">телеграм</a>
+        <a href="https://instagram.com/deniskrumko">не инстраграм</a>
+        <a href="https://twitter.com/deniskrumko">не твиттер</a>
+        <a href="https://github.com/deniskrumko">гитхаб</a>
+        <a href="https://stackoverflow.com/users/8805769/denis-krumko">стэк оверфлоу</a>
+        <a href="https://zen.yandex.ru/deniskrumko">яндекс дзен</a>
+        <a href="" onclick="alert('хаха, повелись)))')">онли фанс</a>
+      </div>
 
-			<!-- My site -->
-			<a class="ui card" target="_blank" href="https://deniskrumko.ru/">
-				<div class="content">
-					<div class="header"><i class="address book icon"></i>Мой сайт</div>
-					<div class="meta">
-						<span class="category">deniskrumko.ru</span>
-					</div>
-					<div class="description">
-						<p>Сайт я закрыл, скоро будет ребрендинг))</p>
-					</div>
-				</div>
-			</a>
+      <div class="pure-u-1-1 pure-u-md-1-3 footer-block">
+        <b>YouTube каналы</b>
+        <a href="https://www.youtube.com/channel/UCByZJxhmHycQ9NI3tYnodKw">denis krumko</a>
+        <a href="https://www.youtube.com/user/dendynotdead">dendy not dead</a>
+        <a href="https://www.youtube.com/channel/UCbVIrtVCFAuqsG28c2tBdkw">polystra music</a>
+        <a href="https://www.youtube.com/channel/UC0JJ8zdWoSCEbt4aO7AymlA">tatina patina ❤️</a>
+      </div>
 
-			<!-- Instagram -->
-			<a class="ui card" target="_blank" href="https://www.instagram.com/deniskrumko/">
-				<div class="content">
-					<div class="header">Не инста</div>
-					<div class="meta">
-						<span class="category">@deniskrumko</span>
-					</div>
-					<div class="description">
-						<p>Такой соцсети не существует</p>
-					</div>
-				</div>
-			</a>
-
-			<!-- Twitter -->
-			<a class="ui card" target="_blank" href="https://twitter.com/deniskrumko">
-				<div class="content">
-					<div class="header"></i>Не твиттер</div>
-					<div class="meta">
-						<span class="category">@deniskrumko</span>
-					</div>
-					<div class="description">
-						<p>Такая соцсеть ни у кого не работает</p>
-					</div>
-				</div>
-			</a>
-
-			<!-- Youtube -->
-			<a class="ui card" target="_blank" href="https://www.youtube.com/channel/UCByZJxhmHycQ9NI3tYnodKw">
-				<div class="content">
-					<div class="header"><i class="youtube icon"></i>Youtube</div>
-					<div class="meta">
-						<span class="category">www.youtube.com</span>
-					</div>
-					<div class="description">
-						<p>Иногда выкладываю видео и тут</p>
-					</div>
-				</div>
-			</a>
-
-			<!-- Telegram -->
-			<a class="ui card" target="_blank" href="http://t.me/deniskrumko">
-				<div class="content">
-					<div class="header"><i class="telegram plane icon"></i>Telegram</div>
-					<div class="meta">
-						<span class="category">@deniskrumko</span>
-					</div>
-					<div class="description">
-						<p>Если найдете способ зайти в Telegram, то пишите</p>
-					</div>
-				</div>
-			</a>
-
-			<!-- Github -->
-			<a class="ui card" target="_blank" href="https://github.com/deniskrumko">
-				<div class="content">
-					<div class="header"><i class="github icon"></i>Github</div>
-					<div class="meta">
-						<span class="category">@deniskrumko</span>
-					</div>
-					<div class="description">
-						<p>Молодой и небесперспективный Python разработчик</p>
-					</div>
-				</div>
-			</a>
-
-			<!-- Gitlab -->
-			<a class="ui card" target="_blank" href="https://gitlab.com/deniskrumko">
-				<div class="content">
-					<div class="header"><i class="gitlab icon"></i>Gitlab</div>
-					<div class="meta">
-						<span class="category">@deniskrumko</span>
-					</div>
-					<div class="description">
-						<p>Ну gitlab пусть тоже будет :)</p>
-					</div>
-				</div>
-			</a>
-
-			<!-- Stack Overflow -->
-			<a class="ui card" target="_blank" href="https://stackoverflow.com/users/8805769/denis-krumko">
-				<div class="content">
-					<div class="header"><i class="stack overflow icon"></i>Stack Overflow</div>
-					<div class="meta">
-						<span class="category">Denis Krumko</span>
-					</div>
-					<div class="description">
-						<p>Не очень активный юзер здесь</p>
-					</div>
-				</div>
-			</a>
-
-			<!-- Twitch -->
-			<a class="ui card" target="_blank" href="https://www.twitch.tv/deniskrumko">
-				<div class="content">
-					<div class="header"><i class="twitch icon"></i>Twitch</div>
-					<div class="meta">
-						<span class="category">@deniskrumko</span>
-					</div>
-					<div class="description">
-						<p>Только смотрю</p>
-					</div>
-				</div>
-			</a>
-
-		</div>
-
-	</div>
+      <div class="pure-u-1-1 pure-u-md-1-3 footer-block">
+        <b>Копирайты</b>
+        <div>
+          Last update: November 8, 2022.
+          <br>
+          <br>
+          Design, logo © 2022 Denis Krumko Inc;
+          <br>user contributions licensed under blessing of
+          our mighty Lord, <a href="/profile/" id="Jesus">Jesus Christ</a>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+</footer>
 </body>
-
 </html>
