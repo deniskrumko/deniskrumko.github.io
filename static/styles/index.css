@@ -34,7 +34,7 @@ a:hover {
 .block {
     width: calc(100% - 70px);
     border: 6px solid #AB1E65;
-    padding: 0px 20px 16px 20px;
+    padding: 0px 20px 0px 20px;
     margin: 10px 0px 20px 0px;
     display: inline-block;
 }
@@ -73,27 +73,39 @@ a:hover {
     top: -10px;
     font-size: 26px;
     line-height: 26px;
-    margin: 0;
+    margin: 0px 0px 10px 0px;
+}
+
+.social {
+    display: block;
+    position: relative;
+    top: -10px;
+    font-size: 26px;
+    line-height: 26px;
 }
 
 .social a {
-    font-size: 32px;
-    margin-right: 14px;
-    margin-bottom: 16px;
+    font-size: 36px;
+    margin-right: 16px;
+    margin-bottom: 20px;
     display: inline-block;
     padding: 0;
 }
 
-.social-m a {
+.social-small a {
     font-size: 26px;
-    margin-right: 12px;
-    margin-bottom: 14px;
+    margin-right: 16px;
+    margin-bottom: 20px;
     display: inline-block;
     padding: 0;
 }
 
 .image {
     width: 90%;
+}
+
+.image-s {
+    width: 60%;
 }
 
 .image-full {
@@ -106,7 +118,7 @@ a:hover {
 }
 
 .image-btn.large {
-    height: 140px !important;
+    height: 150px;
 }
 
 .image-btn:hover {
@@ -125,12 +137,20 @@ a:hover {
     margin-top: 30px;
     color: #461e85;
 }
+
 #Jesus {
     color: #461e85 !important;
     text-decoration: underline;
 }
 
+.with-icons {
+    padding-top: 6px;
+}
+
 @media only screen and (max-width: 767px) {
+    .hidden-m {
+        display: none !important;
+    }
 
     .block {
         width: auto;
@@ -139,17 +159,19 @@ a:hover {
     .image {
         width: 100%;
     }
-    .social a {
-        font-size: 27px;
-        margin-right: 14px;
-        margin-bottom: 22px;
-        display: inline-block;
-        padding: 0;
+
+    .image-s {
+        width: 90%;
     }
-    .social-m a {
-        font-size: 27px;
-        margin-right: 14px;
-        margin-bottom: 22px;
+
+    .image-btn.large {
+        height: 130px;
+    }
+
+    .social a {
+        font-size: 30px;
+        margin-right: 8px;
+        margin-bottom: 20px;
         display: inline-block;
         padding: 0;
     }
