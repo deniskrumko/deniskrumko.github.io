@@ -43,6 +43,29 @@
   <link rel="stylesheet" href="static/fonts/Opirus/stylesheet.css">
 </head>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var img = document.getElementById('pixel-me');
+  var hanbok = document.getElementById('hanbok');
+
+  if (img) {
+    var originalSrc = 'static/images/pxArt.png';
+    var altSrc = 'static/images/avatar.jpg';
+
+    img.addEventListener('click', function() {
+      if (img.src.includes('pxArt.png')) {
+        img.src = altSrc;
+        hanbok.textContent = 'оригинале';
+      } else {
+        img.src = originalSrc;
+        hanbok.textContent = 'ханбоке';
+      }
+    });
+  }
+});
+</script>
+</head>
+
 <body>
   <div class="container">
     <div class="pure-g">
@@ -54,9 +77,9 @@
           <div class="pure-g">
             <div class="pure-u-1 pure-u-md-1-2">
               <div style="position: relative; top: -5px">
-                <img src="static/images/pxArt.png" alt="" class="image">
+                <img src="static/images/pxArt.png" alt="That's me" class="image" id="pixel-me">
                 <div class="small" style="margin-bottom: 10px;">
-                  Это я в <a href="https://ru.wikipedia.org/wiki/%D0%A5%D0%B0%D0%BD%D0%B1%D0%BE%D0%BA" target="_blank">ханбоке</a> (2023)
+                  Это я в <a href="https://ru.wikipedia.org/wiki/%D0%A5%D0%B0%D0%BD%D0%B1%D0%BE%D0%BA" target="_blank" id="hanbok">ханбоке</a> (2023)
                 </div>
               </div>
             </div>
@@ -88,16 +111,20 @@
         <!-- ВИДЕОБЛОГГИНГ -->
         <div class="block" data-heading="Видеоблог">
           <p>
-            Снимаю travel блоги и иногда что-то про музыку, и уже каким-то образом набралось <a href="https://youtube.com/@dkrumko" target="_blank">> 1K подписчиков</a> на канале :)
+            Снимаю travel блоги и иногда что-то про музыку, и уже каким-то образом набралось <a href="https://youtube.com/@dkrumko" target="_blank">> 1K подписчиков</a> на YouTube)
           </p>
           <div class="pure-g with-icons">
-            <a class="pure-u-1-2 center" href="https://youtube.com/@dkrumko" target="_blank">
+            <a class="pure-u-1-3 center" href="https://youtube.com/@dkrumko" target="_blank">
               <img src="static/images/yt.png" alt="" class="image-btn">
-              <div class="small">ОСНОВНОЙ КАНАЛ</div>
+              <div class="small">YOUTUBE</div>
             </a>
-            <a class="pure-u-1-2 center" href="https://dzen.ru/deniskrumko" target="_blank">
+            <a class="pure-u-1-3 center" href="https://dzen.ru/deniskrumko" target="_blank">
               <img src="static/images/dzen.png" alt="" class="image-btn">
-              <div class="small">(СТАРОЕ ТУТ)</div>
+              <div class="small">ДЗЕН</div>
+            </a>
+            <a class="pure-u-1-3 center" href="https://dzen.ru/deniskrumko" target="_blank">
+              <img src="static/images/rutube.png" alt="" class="image-btn">
+              <div class="small">RUTUBE</div>
             </a>
           </div>
           <br>
@@ -121,7 +148,7 @@
           <br>
 
           <p>
-            Раньше записывал каверы на <a href="https://www.youtube.com/user/dendynotdead" target="_blank">втором канале</a>, но в целом забросил это дело
+            Раньше записывал каверы на <a href="https://www.youtube.com/user/dendynotdead" target="_blank">YouTube</a>, но в целом забросил это дело
           </p>
         </div>
 
@@ -133,8 +160,8 @@
         <!-- РАБОТА -->
         <div class="block" data-heading="Работа">
           <p>
-            Работаю в
-            крутой международной IT-компании <a href="https://kolesa.group/" target="_blank">Kolesa Group</a> на позиции MLOps Engineer
+            Работаю как MLOps Engineer в
+            крутой международной IT-компании <a href="https://kolesa.group/" target="_blank">Kolesa Group</a>
           </p>
           <div class="center" style="margin: 8px 0px 20px 0px;">
             <img src="static/images/kolesa.png" alt="Kolesa Group" class="image-s">
@@ -195,7 +222,7 @@
       На этом пока все ^^
     </div>
     <div class="copyright">
-      Last update: May 21, 2025.
+      Last update: July 29, 2025.
       <br>
       Design, logo © 2024 Denis Krumko Inc;
       user contributions licensed under blessing of our mighty Lord,
