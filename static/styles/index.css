@@ -114,7 +114,11 @@ a:hover {
 }
 
 .image-btn {
-    height: 80px;
+    height: 100px;
+}
+
+h1 {
+    font-size: 3rem;
 }
 
 .image-btn.large {
