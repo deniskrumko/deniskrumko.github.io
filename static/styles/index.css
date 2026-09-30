@@ -138,6 +138,11 @@ h1 {
     color: #d02a7d;
 }
 
+h1 .heading-link {
+    color: inherit;
+    text-decoration: none;
+}
+
 .block h2 {
     font-family: "Pixel", monospace;
     color: #c6c9e2;
@@ -148,6 +153,41 @@ h1 {
 .block h3 {
     font-size: 2rem;
     margin: 0px 0px 20px 0px;
+}
+
+.talk-block::before {
+    content: none;
+}
+
+.talk-block h2 + p:not(.talk-subtitle) {
+    margin-top: 20px;
+}
+
+.block .talk-event {
+    display: block;
+    box-sizing: border-box;
+    width: calc(100% + 40px);
+    background-color: #AB1E65;
+    color: #210b44;
+    padding: 2px 10px 4px 10px;
+    margin: 0px -20px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.block:hover .talk-event {
+    background-color: #d02a7d;
+}
+
+.block .talk-subtitle {
+    font-family: "Opirus", monospace;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #8b8d9f;
+    top: 0;
+    margin: 8px 0px 12px 0px;
 }
 
 .image-btn.large {
