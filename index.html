@@ -46,19 +46,35 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var img = document.getElementById('pixel-me');
+  var caption = document.getElementById('pixel-caption');
+  var block = document.getElementById('greeting-block');
+  var originalSrc = 'static/images/gpt3.jpg';
+  var altSrc = 'static/images/gpt2original.jpg';
+  var clickCount = 0;
+  var captions = [
+    'это в Японии в 2025 г.',
+    'смотрю на гору Фудзи 🗻',
+    'сколько можно тыкать?',
+    'весело тебе смотрю )))',
+    'щас все сломается'
+  ];
 
-  if (img) {
-    var originalSrc = 'static/images/gpt2.jpg';
-    var altSrc = 'static/images/gpt2original.jpg';
+  if (!img || !caption || !block) return;
 
-    img.addEventListener('click', function() {
-      if (img.src.includes('gpt2.jpg')) {
-        img.src = altSrc;
-      } else {
-        img.src = originalSrc;
-      }
-    });
-  }
+  img.addEventListener('click', function() {
+    clickCount += 1;
+    img.src = img.src.includes('gpt3.jpg') ? altSrc : originalSrc;
+
+    if (clickCount <= captions.length) {
+      caption.textContent = captions[clickCount - 1];
+      return;
+    }
+
+    block.classList.add('is-disappearing');
+    window.setTimeout(function() {
+      block.remove();
+    }, 350);
+  });
 });
 </script>
 </head>
@@ -70,12 +86,12 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="pure-u-1-1 pure-u-md-1-2">
 
         <!-- ПРИВЕТСТВИЕ -->
-        <div class="block" data-heading="Привет">
+        <div class="block" id="greeting-block" data-heading="Привет">
           <div class="pure-g">
             <div class="pure-u-1 pure-u-md-1-2">
               <div style="position: relative; top: -5px">
-                <img src="static/images/gpt2.jpg" alt="That's me" class="image" id="pixel-me">
-                <div class="small" style="margin-bottom: 10px;">
+                <img src="static/images/gpt3.jpg" alt="That's me" class="image" id="pixel-me">
+                <div class="small" id="pixel-caption" style="margin-bottom: 10px;">
                   на фотку можно тыкнуть
                 </div>
               </div>
@@ -105,55 +121,10 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
         </div>
 
-        <!-- ВИДЕОБЛОГГИНГ -->
-        <div class="block" data-heading="Видеоблог">
-          <p>
-            Снимаю TRAVEL блоги и иногда что-то про музыку, и уже каким-то образом набралось <a href="https://youtube.com/@dkrumko" target="_blank">1K подписчиков</a> на YOUTUBE
-          </p>
-          <div class="pure-g with-icons">
-            <a class="pure-u-1-2 center" href="https://youtube.com/@dkrumko" target="_blank">
-              <img src="static/images/yt.png" alt="" class="image-btn large">
-              <div class="small">YOUTUBE</div>
-            </a>
-            <a class="pure-u-1-2 center" href="https://rutube.ru/channel/67170371/" target="_blank">
-              <img src="static/images/rutube.png" alt="" class="image-btn large">
-              <div class="small">RUTUBE</div>
-            </a>
-          </div>
-          <br>
-        </div>
-
-        <!-- МУЗЫКА -->
-        <div class="block" data-heading="Музыка">
-          <p>
-            Играю на гитаре, пою и пишу собственную музыку, ищите в моем Telegram канале <a target="_blank" href="https://t.me/brain_decay">«ДЕНЧИК УШЕЛ В МЕТАЛЛ»</a>
-          </p>
-          <div class="pure-g with-icons">
-            <a class="pure-u-1-2 center" href="https://t.me/brain_decay" target="_blank">
-              <img src="static/images/denchik.png" alt="" class="image-btn large">
-              <div class="small">ССЫЛКА НА TELEGRAM</div>
-            </a>
-            <a class="pure-u-1-2 center" href="https://youtu.be/tA34FMdmzGQ?feature=shared" target="_blank">
-              <img src="static/images/brain_decay.png" alt="" class="image-btn large">
-              <div class="small">ПЕРВЫЙ АЛЬБОМ (2024)</div>
-            </a>
-          </div>
-          <br>
-
-          <p>
-            Раньше записывал каверы на другом <a href="https://www.youtube.com/user/dendynotdead" target="_blank">YOUTUBE канале</a>, но в целом забросил это дело...
-          </p>
-        </div>
-
-      </div>
-
-      <!-- ПРАВАЯ КОЛОНКА -->
-      <div class="pure-u-1-1 pure-u-md-1-2">
-
         <!-- РАБОТА -->
         <div class="block" data-heading="Работа">
           <p>
-            Работаю как MLOps Engineer в международной IT-компании <a href="https://kolesa.group/" target="_blank">«KOLESA GROUP»</a>, которая делает лучшие продукты в своем сегменте на рынке Казахстана и Узбекистана:
+            Работаю на позиции Senior MLOps Engineer в международной IT-компании <a href="https://kolesa.group/" target="_blank">«KOLESA GROUP»</a>, которая делает лучшие продукты в своем сегменте на рынке Казахстана и Узбекистана:
           </p>
           <div class="pure-g with-icons">
             <a class="pure-u-1-3 center" href="https://kolesa.group/products/kolesa" target="_blank">
@@ -180,28 +151,11 @@ document.addEventListener('DOMContentLoaded', function() {
           <p>
             Записи выступлений можно <a href="public.html">посмотреть по ссылке</a>
           </p>
-        </div>
-
-        <!-- РАЗРАБОТКА -->
-        <div class="block" data-heading="Разработка">
-          <p>
-            <a href="https://www.linkedin.com/in/deniskrumko/" target="_blank">С 2016 года</a> пишу бэкенды на Python и не так давно начал дружить с Golang. Обожаю писать тесты и докстринги, а также тайно люблю frontend...
-            <br><br>
-            Каждый год с 2017 участвую в новогоднем <a href="https://github.com/deniskrumko/advent-of-code/blob/master/README.md" target="_blank">Advent Of Code</a>, присоединяйтесь!
-            <br><br>
-            Также иногда выкладываю что-нибудь интересное на <a href="https://github.com/deniskrumko" target="_blank">Github</a> (подписка, звездочка, моё уважение)
-          </p>
-          <div class="pure-g with-icons">
-            <a class="pure-u-1-2 center" href="https://github.com/deniskrumko" target="_blank">
-              <img src="static/images/github.png" alt="" class="image-btn large">
-              <div class="small">GITHUB</div>
-            </a>
-            <a class="pure-u-1-2 center" href="https://pypi.org/user/deniskrumko/" target="_blank">
-              <img src="static/images/pypi.png" alt="" class="image-btn large">
-              <div class="small">PYPI PACKAGES</div>
+          <div id="public-life-box">
+            <a href="public.html">
+              <img src="static/images/publiclife.png" alt="Веду конфу" class="image" id="public-life-img">
             </a>
           </div>
-          <br>
         </div>
 
         <!-- О СЕБЕ -->
@@ -214,6 +168,71 @@ document.addEventListener('DOMContentLoaded', function() {
             Сейчас все свободное время я или провожу в походах, или сижу записываю музыку, ну или уже изредка играю в <a href="https://stratege.ru/playstation/users/deniskrumko" target="_blank">PS5</a> или Switch.
           </p>
         </div>
+
+      </div>
+
+      <!-- ПРАВАЯ КОЛОНКА -->
+      <div class="pure-u-1-1 pure-u-md-1-2">
+
+          <!-- ВИДЕОБЛОГГИНГ -->
+          <div class="block" data-heading="Видеоблог">
+            <p>
+              Снимаю TRAVEL блоги и иногда что-то про музыку, и уже каким-то образом набралось <a href="https://youtube.com/@dkrumko" target="_blank">1K подписчиков</a> на YOUTUBE
+            </p>
+            <div class="pure-g with-icons">
+              <a class="pure-u-1-2 center" href="https://youtube.com/@dkrumko" target="_blank">
+                <img src="static/images/yt.png" alt="" class="image-btn large">
+                <div class="small">YOUTUBE</div>
+              </a>
+              <a class="pure-u-1-2 center" href="https://rutube.ru/channel/67170371/" target="_blank">
+                <img src="static/images/rutube.png" alt="" class="image-btn large">
+                <div class="small">RUTUBE</div>
+              </a>
+            </div>
+            <br>
+          </div>
+
+          <!-- МУЗЫКА -->
+          <div class="block" data-heading="Музыка">
+            <p>
+              Играю на гитаре, пою и пишу собственную музыку, ищите в моем Telegram канале <a target="_blank" href="https://t.me/brain_decay">«ДЕНЧИК УШЕЛ В МЕТАЛЛ»</a>
+            </p>
+            <div class="pure-g with-icons">
+              <a class="pure-u-1-2 center" href="https://t.me/brain_decay" target="_blank">
+                <img src="static/images/denchik.png" alt="" class="image-btn large">
+                <div class="small">ССЫЛКА НА TELEGRAM</div>
+              </a>
+              <a class="pure-u-1-2 center" href="https://youtu.be/tA34FMdmzGQ?feature=shared" target="_blank">
+                <img src="static/images/brain_decay.png" alt="" class="image-btn large">
+                <div class="small">ПЕРВЫЙ АЛЬБОМ (2024)</div>
+              </a>
+            </div>
+            <br>
+
+            <p>
+              Раньше записывал каверы на другом <a href="https://www.youtube.com/user/dendynotdead" target="_blank">YOUTUBE канале</a>, но в целом забросил это дело...
+            </p>
+          </div>
+
+          <!-- РАЗРАБОТКА -->
+          <div class="block" data-heading="Разработка">
+            <p>
+              <a href="https://www.linkedin.com/in/deniskrumko/" target="_blank">С 2016 года</a> пишу бэкенды на Python и не так давно начал дружить с Golang. Обожаю писать тесты и докстринги, а также тайно люблю frontend...
+              <br><br>
+              Иногда выкладываю что-нибудь интересное на <a href="https://github.com/deniskrumko" target="_blank">Github</a> – с вас Follow, звёздочки и моё уважение
+            </p>
+            <div class="pure-g with-icons">
+              <a class="pure-u-1-2 center" href="https://github.com/deniskrumko" target="_blank">
+                <img src="static/images/github.png" alt="" class="image-btn large">
+                <div class="small">GITHUB</div>
+              </a>
+              <a class="pure-u-1-2 center" href="https://pypi.org/user/deniskrumko/" target="_blank">
+                <img src="static/images/pypi.png" alt="" class="image-btn large">
+                <div class="small">PYPI PACKAGES</div>
+              </a>
+            </div>
+            <br>
+          </div>
 
          <!-- ДОП.ССЫЛКИ -->
         <!-- <div class="block" data-heading="Еще ссылки">
