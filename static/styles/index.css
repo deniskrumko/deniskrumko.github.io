@@ -139,6 +139,15 @@ a:hover {
     height: 90px;
 }
 
+.inline-heart {
+    display: inline-block;
+    height: 0.85em;
+    width: auto;
+    vertical-align: middle;
+    margin-left: -0.3em;
+    transform: translateY(-0.08em);
+}
+
 h1 {
     font-size: 3rem;
     font-family: "Pixel", monospace;
